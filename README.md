@@ -71,53 +71,20 @@ XGBoost and LightGBM use zero-based labels for compatibility.
 
 Instead of hard voting, we combine probability outputs:
 
-𝑃
-𝑓
-𝑖
-𝑛
-𝑎
-𝑙
-=
-∑
-𝑤
-𝑖
-⋅
-𝑃
-𝑖
-P
-final
+𝑃𝑓𝑖𝑛𝑎𝑙 = ∑ 𝑤𝑖 ⋅ 𝑃𝑖
+
 	​
-
-=∑w
-i
-	​
-
-⋅P
-i
-	​
-
-
 Where:
 
-𝑃
-𝑖
-P
-i
-	​
+𝑃𝑖 = model probability output
 
- = model probability output
+𝑤𝑖 = optimized model weight
 
-𝑤
-𝑖
-w
-i
-	​
-
- = optimized model weight
 
 Final prediction:
 
 argmax(P_final)
+
 
 This improves:
 
